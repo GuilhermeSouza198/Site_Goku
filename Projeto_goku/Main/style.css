@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0px;
+    font-family: "Inter Tight", sans-serif;
+    background-color: orange;
+    height: 100%;
+}
+
+img {
+    width: 180px;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    display: inline-block;
+    margin: 0px 20px 20px;
+}
+
+nav {
+    width: 100%;
+    background-color: rgb(0, 43, 99);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .nav-link {
+    text-decoration: none;
+}
+
+.navbar a {
+    color: white;
+    background-color: rgb(0, 43, 99);
+}
+
+.navbar a:hover {
+    color: orange;
+}
+
+.card{
+    display: inline-block;
+    border: 2px;
+    justify-content: center;
+    width: 170px;
+    height: 300px;
+    padding: 10px;
+    margin: 10px 5%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: #00000063 10px 10px;
+}
+
+.card button {
+    color: white;
+    background-color: rgb(0, 43, 99);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 20px 14%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Inter Tight", sans-serif;
+}
+
+.card h5 {
+    margin: 10px;
+    justify-content: center;
+    display: flex;
+}
+
+.card p {
+    margin: 10px;
+    justify-content: center;
+    display: flex;
+}
+
+.card-img-goku {
+    height: 185px;
+    width: 150px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.card button:hover {
+    background-color: rgb(0, 14, 92);
+    color: orange;
+}
+
+.quadradao {
+    padding-left: 170px;
+    justify-content: center;
+    display: block;
+    align-items: center;
+}
+
+form {
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    background-color: rgb(0, 43, 99);
+}
+
+form button {
+    border: none;
+    background-color: rgb(0, 43, 99);
+}
+
+form img {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+form input {
+    width: 30%;
+}
+
+.sacola {
+    width: 40px;
+    height: 40px;
+}
+
+.pesquisa {
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.979);
+}
+
+
+.input-container {
+    width: 300px;
+    margin-bottom: 20px;
+    position: relative;
+    left: 185px;
+}
+
+.icon {
+    position: absolute;
+    right: 150px;
+    top: calc(50% + 5px);
+    transform: translateY(calc(-50% - 5px));
+}
+
+.input {
+    width: 100%;
+    height: 15px;
+    padding: 10px;
+    transition: .2s linear;
+    border: 2.5px solid black;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    right: 160px;
+    position: relative;
+}
+
+.input:focus {
+    outline: none;
+    border: 0.5px solid black;
+    box-shadow: -5px -5px 0px black;
+}
+
+.input-container:hover>.icon {
+    animation: anim 1s linear infinite;
+}
+
+@keyframes anim {
+
+    0%,
+    100% {
+        transform: translateY(calc(-50% - 5px)) scale(1);
+    }
+
+    50% {
+        transform: translateY(calc(-50% - 5px)) scale(1.1);
+    }
+}
+
+
+.h2Carrinho {
+    font-size: 20px;
+    position: relative;
+    left: 500px;
+    color: white;
+}
+
+.cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    left: 35%;
+}
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: px;
+    text-transform: uppercase;
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#carrinhoLabel{
+    position: relative;
+    left: 1200px;
+    bottom: 700px;
+    margin: 0;
+}
+
+#carrinhoLabel ul{
+    width: 137px;
+    display: absolute;
+    position: relative;
+    left: 430px;
+    list-style: none;
+    font-family: "Inter Tight", sans-serif;
+}
+
+.btn-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    position:absolute;
+    top: -8%;
+    right: -100%;
+    width: 200px;
+  }
+  
+  .btn-cart::after {
+    content: attr(data-quantity);
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    font-size: 15px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s linear;
+    top: 115%;
+  }
+  
+  .icon-cart {
+    width: 24.38px;
+    height: 30.52px;
+    transition: .2s linear;
+  }
+  
+  .icon-cart path {
+    fill: orange;
+    transition: .2s linear;
+  }
+  
+  .btn-cart:hover > .icon-cart {
+    transform: scale(1.2);
+  }
+  
+  .btn-cart:hover > .icon-cart path {
+    fill: cyan;
+  }
+  
+  .btn-cart:hover::after {
+    visibility: visible;
+    opacity: 1;
+    top: 105%;
+  }
+  

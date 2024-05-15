@@ -1,0 +1,54 @@
+  body {
+    font-family: 'Kamehameha', sans-serif;
+    background-color: orange;
+    color: #000000;
+  }
+  
+  #carrinho {
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    background-color: white;
+    margin: auto;
+  }
+  
+  #carrinho p {
+    display: inline-block;
+    font-size: 18px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-left: 70px;
+  }
+  
+  button {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 65px;
+  }
+  .Compras{
+    position: fixed;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 60px;
+    margin-left: 43%;
+  }
+
+  button:hover {
+    background-color: cyan;
+  }
+
+  .pagamento{
+    position: fixed;
+  }
+
