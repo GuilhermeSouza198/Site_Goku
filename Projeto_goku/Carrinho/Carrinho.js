@@ -25,41 +25,41 @@ window.onload = function() {
     cardVazio.appendChild(cardBodyVazio);
     divCarrinho.appendChild(cardVazio);
   } else {
-  for (let idProduto in carrinho) {
-    let quantidade = carrinho[idProduto];
+    for (let idProduto in carrinho) {
+      let quantidade = carrinho[idProduto];
 
-    let card = document.createElement('div');
-    card.className = 'card';
-  
-    let cardBody = document.createElement('div');
-    cardBody.className = 'card-body';
+      let card = document.createElement('div');
+      card.className = 'card';
+    
+      let cardBody = document.createElement('div');
+      cardBody.className = 'card-body';
 
-    let title = document.createElement('h5');
-    title.className = 'card-title';
-    title.textContent = produtos[idProduto];
-    cardBody.appendChild(title);
+      let title = document.createElement('h5');
+      title.className = 'card-title';
+      title.textContent = produtos[idProduto];
+      cardBody.appendChild(title);
 
-    let text = document.createElement('p');
-    text.className = 'card-text';
-    text.textContent = 'Quantidade: ' + quantidade;
-    cardBody.appendChild(text);
+      let text = document.createElement('p');
+      text.className = 'card-text';
+      text.textContent = 'Quantidade: ' + quantidade;
+      cardBody.appendChild(text);
 
-    let btnRemover = document.createElement('button');
-    btnRemover.textContent = 'Remover Produto';
-    btnRemover.addEventListener('click', function() {
-      if (carrinho[idProduto] > 1) {
-        carrinho[idProduto]--;
-      } else {
-        delete carrinho[idProduto];
-      }
-      localStorage.setItem('carrinho', JSON.stringify(carrinho));
-      location.reload();
-    });
-    cardBody.appendChild(btnRemover);
+      let btnRemover = document.createElement('button');
+      btnRemover.textContent = 'Remover Produto';
+      btnRemover.addEventListener('click', function() {
+        if (carrinho[idProduto] > 1) {
+          carrinho[idProduto]--;
+        } else {
+          delete carrinho[idProduto];
+        }
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+        location.reload();
+      });
+      cardBody.appendChild(btnRemover);
 
-    card.appendChild(cardBody);
-    divCarrinho.appendChild(card);
-  }
+      card.appendChild(cardBody);
+      divCarrinho.appendChild(card);
+    }
   }
   const valorTotalCarrinho = calcularValorTotal();
   const elementoValorTotal = document.getElementById('valorTotal');
@@ -86,3 +86,19 @@ function calcularValorTotal() {
   return valorTotal;
 }
 
+function processarPagamento() {
+  let formaPagamento = document.getElementById('formaPagamento').value;
+  let valorTotal = calcularValorTotal();
+
+  if (valorTotal === 0) {
+    alert('Seu carrinho está vazio. Adicione produtos antes de prosseguir com o pagamento.');
+    return;
+  }
+
+  alert(`Pagamento de R$${valorTotal.toFixed(2)} realizado com sucesso via ${formaPagamento.toUpperCase()}!`);
+
+  localStorage.removeItem('carrinho');
+
+
+  window.location.href = '/Main/index.html';
+}
