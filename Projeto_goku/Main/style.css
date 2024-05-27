@@ -39,29 +39,35 @@ nav .nav-link {
     color: orange;
 }
 
+.carousel{
+    width: 1300px;
+    height: 600px;
+    display: inline-block;
+    top: 50px;
+    left: 150px;
+    margin-bottom: 55px;
+    
+}
+
+.carousel img{
+    width: 1000px;
+    height: 600px;
+    background: no-repeat center;
+    background-size: cover;   
+}
+
+
 .card{
     display: inline-block;
     border: 2px;
     justify-content: center;
-    width: 170px;
-    height: 300px;
+    width: 220px;
+    height: 400px;
     padding: 10px;
     margin: 10px 5%;
+    position: relative;
     background-color: rgb(255, 255, 255);
     box-shadow: #00000063 10px 10px;
-}
-
-.card button {
-    color: white;
-    background-color: rgb(0, 43, 99);
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    margin: 20px 14%;
-    height: 35px;
-    border: none;
-    border-radius: 5px;
-    font-family: "Inter Tight", sans-serif;
 }
 
 .card h5 {
@@ -77,8 +83,8 @@ nav .nav-link {
 }
 
 .card-img-goku {
-    height: 185px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -90,10 +96,11 @@ nav .nav-link {
 }
 
 .quadradao {
-    padding-left: 170px;
+    padding-left: 250px;
     justify-content: center;
     display: block;
     align-items: center;
+
 }
 
 form {
@@ -128,7 +135,7 @@ form input {
 }
 
 .pesquisa {
-    height: 30px;
+    height: 100px;
     border: none;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.979);
@@ -144,7 +151,7 @@ form input {
 
 .icon {
     position: absolute;
-    right: 150px;
+    right: 170px;
     top: calc(50% + 5px);
     transform: translateY(calc(-50% - 5px));
 }

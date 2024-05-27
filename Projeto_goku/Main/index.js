@@ -69,15 +69,17 @@ window.adicionarAoCarrinho = function(idProduto) {
   let carrinho = localStorage.getItem('carrinho') ? JSON.parse(localStorage.getItem('carrinho')) : {};
   carrinho[idProduto] = (carrinho[idProduto] || 0) + 1;
   localStorage.setItem('carrinho', JSON.stringify(carrinho));
-
+  
+  
+  alert("Pedido adicionado ao carrinho");
   let quantidadeTotal = Object.values(carrinho).reduce((a, b) => a + b, 0);
   document.querySelector('.btn-cart .quantity').textContent = quantidadeTotal;
-
-}
+  
+} 
 
 document.addEventListener('DOMContentLoaded', function () {
   var btnCart = document.querySelector('.btn-cart');
-
+  
   btnCart.addEventListener('click', function(event) {
     event.preventDefault();
     console.log('Button clicked');

@@ -7,14 +7,15 @@
   <title>Carrinho</title>
 </head>
 <body>
-  <div id="carrinho"></div>
+  <div id="carrinho">
+    <p id="carrinhoVazio">O carrinho está vazio</p>
+    <p>Valor total do carrinho: <span id="valorTotal">R$0.00</span></p>
+  </div>
 
-  <button class="Compras" id="voltarCompras" onclick="window.location.href='/Main/index.html'">Voltar às Compras</button>
-  <p>Valor total do carrinho: <span id="valorTotal"></span></p>
-
-  <div class="pagamento">
-    <div id="opcoesPagamento">
-      <button  onclick="processarPagamento()">Pagar</button>
+  <div class="actions">
+    <button class="Compras" id="voltarCompras" onclick="window.location.href='/Main/index.html'">Voltar às Compras</button>
+    <div class="pagamento">
+      <button onclick="processarPagamento()">Pagar</button>
       <select id="formaPagamento">
         <option value="debito">Débito</option>
         <option value="credito">Crédito</option>
